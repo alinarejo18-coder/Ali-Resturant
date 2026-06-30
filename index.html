@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience premium culinary artistry at Ali Restaurant. Indulge in Wagyu steaks, truffle bruschettas, and signature emerald cocktails in an ultra-luxurious setting.">
+    <title>Ali Restaurant | Home</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+<div id="loader">
+    <div class="luxury-loader">
+
+        <div class="rings">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+</div>
+
+
+</head>
+<body>
+    <!-- Custom Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo" id="logo-nav">
+                ALI<span>RESTAURANT</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">Our Story</a>
+                <a href="specialties.html" class="nav-link">Specialties</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="reservation.html" class="nav-link">Reservation</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-toggle-btn" id="cart-toggle-btn" aria-label="Open Cart">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+                <a href="reservation.html" class="cta-btn font-sub">Book Table</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-overlay">
+        <nav class="mobile-links">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">Our Story</a>
+            <a href="specialties.html" class="mobile-link">Specialties</a>
+            <a href="menu.html" class="mobile-link">Menu</a>
+            <a href="reservation.html" class="mobile-link">Reservation</a>
+            <a href="reservation.html" class="mobile-cta-btn">Book Table</a>
+            
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg" style="background-image: linear-gradient(to bottom, rgba(10, 13, 11, 0.7), rgba(10, 13, 11, 0.95)), url('assets/hero_bg.png');"></div>
+            <div class="hero-content container">
+                <span class="hero-subtitle reveal-item">CRAFTED CULINARY EXCELLENCE</span>
+                <h1 class="hero-title reveal-item">
+                    Where Luxury <br>Meets <span class="highlight-green">Pure Gastronomy</span>
+                </h1>
+                <p class="hero-description reveal-item">
+                    Immerse yourself in an exquisite sensory journey. Chef Ali orchestrates raw premium ingredients, emerald-lit aesthetics, and modern techniques into fine dining masterpieces.
+                </p>
+                <div class="hero-actions reveal-item">
+                    <a href="menu.html" class="btn btn-primary">Explore Menu</a>
+                    <a href="reservation.html" class="btn btn-outline">Reserve a Table</a>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="arrow-down"></span>
+            </div>
+        </section>
+
+        <!-- About teaser -->
+        <section class="about-section container section-padding">
+            <div class="about-grid">
+                <div class="about-image-container reveal-item">
+                    <div class="about-image-wrapper">
+                        <img src="assets/chef_ali.png" alt="Chef Ali" class="about-img">
+                        <div class="experience-badge">
+                            <span class="exp-num">15+</span>
+                            <span class="exp-text">Years of <br>Artistry</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal-item">
+                    <span class="section-tag">OUR ORIGIN</span>
+                    <h2 class="section-title">The Culinary Alchemist</h2>
+                    <p class="about-text">
+                        Founded by visionary Chef Ali, our restaurant redefines fine dining. Nestled in a bespoke, emerald-glowing architectural space, we weave culinary techniques with local organic produce to deliver flavor harmonies that linger long after the final bite.
+                    </p>
+                    <a href="about.html" class="btn btn-outline" style="align-self: flex-start;">Discover Our Story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialties teaser -->
+        <section class="specialties-section section-padding">
+            <div class="container">
+                <div class="section-header center reveal-item">
+                    <span class="section-tag">CURATED HIGHLIGHTS</span>
+                    <h2 class="section-title">Chef's Signature Creations</h2>
+                    <p class="section-subtitle">A preview of our most celebrated dishes, crafted to stimulate your visual and gustatory senses.</p>
+                </div>
+
+                <div class="specialties-grid reveal-item">
+                    <!-- Specialty 1 -->
+                    <div class="specialty-card">
+                        <div class="specialty-img-wrapper">
+                            <img src="assets/dish_steak.png" alt="Wagyu Steak" class="specialty-img">
+                        </div>
+                        <div class="specialty-info">
+                            <h3 class="specialty-name">Imperial Wagyu Ribeye</h3>
+                            <p class="specialty-desc font-sub">A5 Grade Wagyu ribeye seared over organic charcoal, smoked rosemary infusions, sea salt flakes, and emerald chimichurri drizzle.</p>
+                            <a href="specialties.html" class="btn btn-outline btn-full font-sub" style="margin-top: 15px;">View Specialties</a>
+                        </div>
+                    </div>
+
+                    <!-- Specialty 2 -->
+                    <div class="specialty-card">
+                        <div class="specialty-img-wrapper">
+                            <img src="assets/dish_souffle.png" alt="Matcha Souffle" class="specialty-img">
+                        </div>
+                        <div class="specialty-info">
+                            <h3 class="specialty-name">Gold Dust Matcha Souffle</h3>
+                            <p class="specialty-desc font-sub">Liquid gold-infused matcha lava souffle, molten dark chocolate core, served with organic Madagascar vanilla bean gelato.</p>
+                            <a href="specialties.html" class="btn btn-outline btn-full font-sub" style="margin-top: 15px;">View Specialties</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section section-padding">
+            <div class="container">
+                <div class="section-header center reveal-item">
+                    <span class="section-tag">TESTIMONIALS</span>
+                    <h2 class="section-title">Acclaim From Our Guests</h2>
+                    <p class="section-subtitle">Read reflections from those who have experienced our unique culinary theatre.</p>
+                </div>
+
+                <div class="testimonials-slider reveal-item">
+                    <div class="testimonial-track" id="testimonial-track">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="quote">"An ethereal dining experience. The dark green ambient glow coupled with the sizzle of Wagyu ribeye created a mesmerizing visual opera. Truly Ali restaurant is a gem."</p>
+                            <div class="author-info">
+                                <h4 class="author-name">Clara Montgomery</h4>
+                                <span class="author-title">Food Critic, Luxe Magazine</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="quote">"Chef Ali's attention to plating is legendary. The truffle bruschetta melted in my mouth, and the table selector system was so elegant. A perfect reservation execution!"</p>
+                            <div class="author-info">
+                                <h4 class="author-name">Alexander Sterling</h4>
+                                <span class="author-title">Gourmand Society President</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="quote">"Matcha lava cake with gold leaf was the highlight of our anniversary. Sitting in the VIP room, surrounded by glassmorphism green panels and premium service, made it unforgettable."</p>
+                            <div class="author-info">
+                                <h4 class="author-name">Vivienne Rousseau</h4>
+                                <span class="author-title">Lifestyle Connoisseur</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-dots">
+                        <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+                        <button class="dot" data-index="1" aria-label="Slide 2"></button>
+                        <button class="dot" data-index="2" aria-label="Slide 3"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Shopping Cart Slide-out Drawer -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Your Order Selection</h3>
+            <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Cart">
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="cart-progress-container">
+            <span class="cart-progress-label" id="cart-progress-text">Add $100.00 more for Complimentary Dessert!</span>
+            <div class="cart-progress-bar">
+                <div class="cart-progress-fill" id="cart-progress-fill" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="cart-items" id="cart-items-container">
+            <div class="empty-cart-message">
+                <p>Your culinary tray is empty.</p>
+                <p class="sub">Explore our menu to add exquisite selections.</p>
+            </div>
+        </div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-row">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-row">
+                <span>Luxury Service Tax</span>
+                <span id="cart-tax">$0.00</span>
+            </div>
+            <div class="cart-summary-row total">
+                <span>Estimated Total</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn btn-full" id="checkout-btn">Proceed to Experience Checkout</button>
+        </div>
+    </div>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="modal-backdrop" id="booking-modal">
+        <div class="modal-card">
+            <div class="modal-success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h3 class="modal-title">Reservation Confirmed</h3>
+            <p class="modal-desc">Your table in our premium sanctuary has been reserved. A digital invitation has been dispatched to your email.</p>
+            <div class="receipt-box" id="booking-receipt"></div>
+            <button class="btn btn-primary btn-full close-modal-btn" id="close-modal-btn">Enter Sanctuary</button>
+        </div>
+    </div>
+
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Scroll to Top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">ALI<span>RESTAURANT</span></a>
+                <p class="footer-desc">Crafting legendary culinary milestones with passion, luxury design, and unparalleled hospitality.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Twitter">TW</a>
+                    <a href="#" aria-label="YouTube">YT</a>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <h4 class="footer-title">Operating Hours</h4>
+                <p class="footer-text">Tuesday - Friday: 5:00 PM - 11:00 PM</p>
+                <p class="footer-text">Saturday - Sunday: 4:00 PM - Midnight</p>
+                <p class="footer-text color-highlight">Closed on Mondays</p>
+            </div>
+
+            <div class="footer-info">
+                <h4 class="footer-title">Location & Contact</h4>
+                <p class="footer-text">789 Emerald Boulevard, Luxury District</p>
+                <p class="footer-text">Email: sanctuary@alirestaurant.com</p>
+                <p class="footer-text">Reservations: +1 (800) 555-ALIS</p>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4 class="footer-title">Join The Registry</h4>
+                <p class="footer-text">Subscribe to receive private dining invites and seasonal culinary updates.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required aria-label="Email Address" autocomplete="email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Ali Restaurant. All rights reserved. Designed for sensory excellence.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Dining</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>

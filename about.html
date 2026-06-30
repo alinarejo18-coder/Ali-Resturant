@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read the culinary origin story of Ali Restaurant. Understand Chef Ali's fine-dining philosophy, luxury kitchen techniques, and local organic sourcing.">
+    <title>Ali Restaurant | Our Story</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+
+
+</head>
+<body>
+
+
+        <div id="loader">
+    <div class="luxury-loader">
+
+        <div class="rings">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+</div>
+
+
+    <!-- Custom Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Header Navigation -->
+    <header class="header scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo" id="logo-nav">
+                ALI<span>RESTAURANT</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">Our Story</a>
+                <a href="specialties.html" class="nav-link">Specialties</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="reservation.html" class="nav-link">Reservation</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-toggle-btn" id="cart-toggle-btn" aria-label="Open Cart">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+                <a href="reservation.html" class="cta-btn font-sub">Book Table</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-overlay">
+        <nav class="mobile-links">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">Our Story</a>
+            <a href="specialties.html" class="mobile-link">Specialties</a>
+            <a href="menu.html" class="mobile-link">Menu</a>
+            <a href="reservation.html" class="mobile-link">Reservation</a>
+            <a href="reservation.html" class="mobile-cta-btn">Book Table</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Page Header Banner -->
+        <section class="page-banner" style="background-image: linear-gradient(to bottom, rgba(10, 13, 11, 0.8), rgba(7, 9, 8, 1)), url('assets/hero_bg.png');">
+            <div class="container banner-content">
+                <span class="section-tag">WHO WE ARE</span>
+                <h1 class="banner-title">Our Culinary Heritage</h1>
+                <p class="banner-desc">The vision, the elements, and the philosophy behind Ali Restaurant.</p>
+            </div>
+        </section>
+
+        <!-- Detailed Story Grid -->
+        <section id="about" class="about-section container section-padding">
+            <div class="about-grid">
+                <div class="about-image-container reveal-item">
+                    <div class="about-image-wrapper">
+                        <img src="assets/chef_ali.png" alt="Chef Ali preparing a dish" class="about-img">
+                        <div class="experience-badge">
+                            <span class="exp-num">15+</span>
+                            <span class="exp-text">Years of <br>Artistry</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal-item">
+                    <span class="section-tag">THE ALCHEMIST</span>
+                    <h2 class="section-title">Chef Ali's Philosophy</h2>
+                    <p class="about-text">
+                        "For me, fine dining is not just about feeding the body; it is a sacred sensory ritual. The combination of local organic herbs, seared charcoal smoke, and gold-dusting is an alchemy that connects the earth's natural soil directly to the diner's memory."
+                    </p>
+                    <p class="about-text">
+                        Chef Ali started his training in traditional classical kitchens before spending a decade traveling across continents. He developed a deep affinity for dark, ambient dining styles, stating that lower, warm green backlighting heightens the sensitivity of taste buds and smell, allowing guests to experience flavors in their purest, most isolated forms.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="section-padding" style="background-color: var(--color-bg-dark); border-top: var(--border-glass);">
+            <div class="container">
+                <div class="stats-row reveal-item">
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-label">Michelin Stars</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="45">0</span>
+                        <span class="stat-label">Unique Recipes</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-label">Satisfied Guests %</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Atmosphere Section -->
+        <section class="atmosphere-section container section-padding">
+            <div class="about-grid">
+                <div class="about-content reveal-item">
+                    <span class="section-tag">THE SANCTUARY</span>
+                    <h2 class="section-title">Designed for Seclusion</h2>
+                    <p class="about-text">
+                        Every aspect of Ali Restaurant is custom-tailored to provide sensory relaxation. The main dining hall operates under a system of glassmorphic green dividers, creating cozy private alcoves that give parties space and intimacy.
+                    </p>
+                    <p class="about-text">
+                        Acoustic waves are dampened by premium textiles to ensure quiet conversations. Gentle mist of forest herbs (rosemary, mint, and pine extract) is diffused through the ventilation to cleanse the sinuses between courses.
+                    </p>
+                </div>
+                <div class="about-image-container reveal-item">
+                    <div class="about-image-wrapper">
+                        <!-- Reusing hero_bg image with custom green filter overlay since generation is down -->
+                        <img src="assets/hero_bg.png" alt="Luxury restaurant atmosphere" class="about-img" style="filter: hue-rotate(60deg) contrast(1.1);">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Shopping Cart Slide-out Drawer -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Your Order Selection</h3>
+            <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Cart">
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="cart-progress-container">
+            <span class="cart-progress-label" id="cart-progress-text">Add $100.00 more for Complimentary Dessert!</span>
+            <div class="cart-progress-bar">
+                <div class="cart-progress-fill" id="cart-progress-fill" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="cart-items" id="cart-items-container">
+            <div class="empty-cart-message">
+                <p>Your culinary tray is empty.</p>
+                <p class="sub">Explore our menu to add exquisite selections.</p>
+            </div>
+        </div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-row">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-row">
+                <span>Luxury Service Tax</span>
+                <span id="cart-tax">$0.00</span>
+            </div>
+            <div class="cart-summary-row total">
+                <span>Estimated Total</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn btn-full" id="checkout-btn">Proceed to Experience Checkout</button>
+        </div>
+    </div>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="modal-backdrop" id="booking-modal">
+        <div class="modal-card">
+            <div class="modal-success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h3 class="modal-title">Reservation Confirmed</h3>
+            <p class="modal-desc">Your table in our premium sanctuary has been reserved. A digital invitation has been dispatched to your email.</p>
+            <div class="receipt-box" id="booking-receipt"></div>
+            <button class="btn btn-primary btn-full close-modal-btn" id="close-modal-btn">Enter Sanctuary</button>
+        </div>
+    </div>
+
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Scroll to Top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">ALI<span>RESTAURANT</span></a>
+                <p class="footer-desc">Crafting legendary culinary milestones with passion, luxury design, and unparalleled hospitality.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Twitter">TW</a>
+                    <a href="#" aria-label="YouTube">YT</a>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <h4 class="footer-title">Operating Hours</h4>
+                <p class="footer-text">Tuesday - Friday: 5:00 PM - 11:00 PM</p>
+                <p class="footer-text">Saturday - Sunday: 4:00 PM - Midnight</p>
+                <p class="footer-text color-highlight">Closed on Mondays</p>
+            </div>
+
+            <div class="footer-info">
+                <h4 class="footer-title">Location & Contact</h4>
+                <p class="footer-text">789 Emerald Boulevard, Luxury District</p>
+                <p class="footer-text">Email: sanctuary@alirestaurant.com</p>
+                <p class="footer-text">Reservations: +1 (800) 555-ALIS</p>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4 class="footer-title">Join The Registry</h4>
+                <p class="footer-text">Subscribe to receive private dining invites and seasonal culinary updates.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required aria-label="Email Address" autocomplete="email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Ali Restaurant. All rights reserved. Designed for sensory excellence.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Dining</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>

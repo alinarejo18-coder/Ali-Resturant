@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure your seat in our premium dark green and black restaurant layout. Choose main hall booths, VIP suite, or garden courtyard benches.">
+    <title>Ali Restaurant | Reservation</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+
+        <div id="loader">
+    <div class="luxury-loader">
+
+        <div class="rings">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+</div>
+
+    <!-- Custom Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Header Navigation -->
+    <header class="header scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo" id="logo-nav">
+                ALI<span>RESTAURANT</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">Our Story</a>
+                <a href="specialties.html" class="nav-link">Specialties</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="reservation.html" class="nav-link">Reservation</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-toggle-btn" id="cart-toggle-btn" aria-label="Open Cart">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+                <a href="reservation.html" class="cta-btn font-sub">Book Table</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-overlay">
+        <nav class="mobile-links">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">Our Story</a>
+            <a href="specialties.html" class="mobile-link">Specialties</a>
+            <a href="menu.html" class="mobile-link">Menu</a>
+            <a href="reservation.html" class="mobile-link">Reservation</a>
+            <a href="reservation.html" class="mobile-cta-btn">Book Table</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Page Header Banner -->
+        <section class="page-banner" style="background-image: linear-gradient(to bottom, rgba(10, 13, 11, 0.8), rgba(7, 9, 8, 1)), url('assets/hero_bg.png');">
+            <div class="container banner-content">
+                <span class="section-tag">SANCTUARY</span>
+                <h1 class="banner-title">Table Reservations</h1>
+                <p class="banner-desc">Reserve visual seating positions inside Chef Ali's dining hall map.</p>
+            </div>
+        </section>
+
+        <!-- Interactive Reservation Section -->
+        <section id="reservation" class="reservation-section section-padding">
+            <div class="container">
+                <div class="reservation-box reveal-item">
+                    <div class="reservation-header">
+                        <span class="section-tag text-center">SECURE YOUR SEAT</span>
+                        <h2 class="section-title text-center">Luxury Table Reservation</h2>
+                        <p class="section-subtitle text-center">Select your preferred seating layout inside Ali Restaurant. Table selection guarantees atmosphere layout.</p>
+                    </div>
+
+                    <div class="reservation-body">
+                        <!-- Visual Seating Map -->
+                        <div class="seating-map-container">
+                            <h3 class="form-sub-title">Interactive Seating Layout</h3>
+                            
+                            <!-- Restaurant Layout Diagram -->
+                            <div class="restaurant-layout">
+                                <div class="stage-bar">BAR AREA</div>
+                                <div class="tables-grid">
+                                    <!-- Table 1 (Window Booth) -->
+                                    <div class="table-node available" data-table-id="1" data-capacity="2" data-type="Window Booth">
+                                        <div class="table-circle">T1</div>
+                                        <span class="table-tag">Window (2P)</span>
+                                    </div>
+                                    <!-- Table 2 (Indoor Center) -->
+                                    <div class="table-node available" data-table-id="2" data-capacity="4" data-type="Main Hall Center">
+                                        <div class="table-circle">T2</div>
+                                        <span class="table-tag">Center (4P)</span>
+                                    </div>
+                                    <!-- Table 3 (VIP Room) -->
+                                    <div class="table-node available VIP" data-table-id="3" data-capacity="6" data-type="VIP Emerald Suite">
+                                        <div class="table-circle">T3</div>
+                                        <span class="table-tag">VIP (6P)</span>
+                                    </div>
+                                    <!-- Table 4 (Window Booth) -->
+                                    <div class="table-node reserved" data-table-id="4" data-capacity="2" data-type="Window Booth">
+                                        <div class="table-circle">T4</div>
+                                        <span class="table-tag">Reserved</span>
+                                    </div>
+                                    <!-- Table 5 (Garden Terrace) -->
+                                    <div class="table-node available" data-table-id="5" data-capacity="4" data-type="Garden Terrace">
+                                        <div class="table-circle">T5</div>
+                                        <span class="table-tag">Terrace (4P)</span>
+                                    </div>
+                                    <!-- Table 6 (Garden Terrace) -->
+                                    <div class="table-node available" data-table-id="6" data-capacity="8" data-type="Chef's Dining Bench">
+                                        <div class="table-circle">T6</div>
+                                        <span class="table-tag">Chef Bench (8P)</span>
+                                    </div>
+                                </div>
+                                <div class="stage-garden">COURTYARD VIEW</div>
+                            </div>
+
+                            <div class="map-legend">
+                                <div class="legend-item"><span class="legend-dot available"></span> Available</div>
+                                <div class="legend-item"><span class="legend-dot selected"></span> Selected</div>
+                                <div class="legend-item"><span class="legend-dot reserved"></span> Reserved</div>
+                                <div class="legend-item"><span class="legend-dot vip"></span> VIP Suite</div>
+                            </div>
+                        </div>
+
+                        <!-- Booking Details Form -->
+                        <div class="reservation-form-container">
+                            <form id="booking-form" autocomplete="on">
+                                <h3 class="form-sub-title">Reservation Details</h3>
+
+                                <div class="selected-table-info-box" id="selected-table-info-box">
+                                    <p>Selected: <strong id="selected-table-text">No Table Selected</strong></p>
+                                </div>
+
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label for="booking-name">Full Name</label>
+                                        <input type="text" id="booking-name" required placeholder="John Doe" autocomplete="name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="booking-email">Email Address</label>
+                                        <input type="email" id="booking-email" required placeholder="john@example.com" autocomplete="email">
+                                    </div>
+                                </div>
+
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label for="booking-phone">Phone Number</label>
+                                        <input type="tel" id="booking-phone" required placeholder="+1 (555) 000-0000" autocomplete="tel">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="booking-guests">Number of Guests</label>
+                                        <select id="booking-guests" required>
+                                            <option value="1">1 Person</option>
+                                            <option value="2" selected>2 People</option>
+                                            <option value="3">3 People</option>
+                                            <option value="4">4 People</option>
+                                            <option value="6">6 People</option>
+                                            <option value="8">8+ People</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label for="booking-date">Reservation Date</label>
+                                        <input type="date" id="booking-date" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="booking-time">Time Slot</label>
+                                        <select id="booking-time" required>
+                                            <option value="17:00">5:00 PM</option>
+                                            <option value="18:00">6:00 PM</option>
+                                            <option value="19:00" selected>7:00 PM</option>
+                                            <option value="20:00">8:00 PM</option>
+                                            <option value="21:00">9:00 PM</option>
+                                            <option value="22:00">10:00 PM</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="booking-comments">Special Occasion / Dietary Notes</label>
+                                    <textarea id="booking-comments" rows="3" placeholder="E.g., Anniversary, gluten allergy..."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-full" id="submit-booking">Confirm Reservation</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Shopping Cart Slide-out Drawer -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Your Order Selection</h3>
+            <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Cart">
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="cart-progress-container">
+            <span class="cart-progress-label" id="cart-progress-text">Add $100.00 more for Complimentary Dessert!</span>
+            <div class="cart-progress-bar">
+                <div class="cart-progress-fill" id="cart-progress-fill" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="cart-items" id="cart-items-container">
+            <div class="empty-cart-message">
+                <p>Your culinary tray is empty.</p>
+                <p class="sub">Explore our menu to add exquisite selections.</p>
+            </div>
+        </div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-row">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-row">
+                <span>Luxury Service Tax</span>
+                <span id="cart-tax">$0.00</span>
+            </div>
+            <div class="cart-summary-row total">
+                <span>Estimated Total</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn btn-full" id="checkout-btn">Proceed to Experience Checkout</button>
+        </div>
+    </div>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="modal-backdrop" id="booking-modal">
+        <div class="modal-card">
+            <div class="modal-success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h3 class="modal-title">Reservation Confirmed</h3>
+            <p class="modal-desc">Your table in our premium sanctuary has been reserved. A digital invitation has been dispatched to your email.</p>
+            <div class="receipt-box" id="booking-receipt"></div>
+            <button class="btn btn-primary btn-full close-modal-btn" id="close-modal-btn">Enter Sanctuary</button>
+        </div>
+    </div>
+
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Scroll to Top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">ALI<span>RESTAURANT</span></a>
+                <p class="footer-desc">Crafting legendary culinary milestones with passion, luxury design, and unparalleled hospitality.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Twitter">TW</a>
+                    <a href="#" aria-label="YouTube">YT</a>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <h4 class="footer-title">Operating Hours</h4>
+                <p class="footer-text">Tuesday - Friday: 5:00 PM - 11:00 PM</p>
+                <p class="footer-text">Saturday - Sunday: 4:00 PM - Midnight</p>
+                <p class="footer-text color-highlight">Closed on Mondays</p>
+            </div>
+
+            <div class="footer-info">
+                <h4 class="footer-title">Location & Contact</h4>
+                <p class="footer-text">789 Emerald Boulevard, Luxury District</p>
+                <p class="footer-text">Email: sanctuary@alirestaurant.com</p>
+                <p class="footer-text">Reservations: +1 (800) 555-ALIS</p>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4 class="footer-title">Join The Registry</h4>
+                <p class="footer-text">Subscribe to receive private dining invites and seasonal culinary updates.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required aria-label="Email Address" autocomplete="email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Ali Restaurant. All rights reserved. Designed for sensory excellence.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Dining</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>
