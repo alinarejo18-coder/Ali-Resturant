@@ -1,12 +1,6 @@
-/* ==========================================================================
-   ALI RESTAURANT - MULTI-PAGE INTERACTION LOGIC, CUSTOM CURSOR & TRANSITIONS
-   ========================================================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
     
-    // ==========================================================================
-    // A1. Page Loader Transition Overlay Injection & Logic
-    // ==========================================================================
+    
     const transitionOverlay = document.createElement('div');
     transitionOverlay.className = 'page-transition-overlay';
     transitionOverlay.innerHTML = `
@@ -23,12 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const progressFill = transitionOverlay.querySelector('.loader-progress-fill');
 
-    // On initial page load, animate the progress bar filling quickly, then fade out
     setTimeout(() => {
         if (progressFill) progressFill.style.width = '100%';
         setTimeout(() => {
             transitionOverlay.classList.add('fade-out');
-        }, 500); // Allow time for the progress bar to glide fully
+        }, 500); 
     }, 50);
 
     window.addEventListener("load", () => {
@@ -39,22 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1200);
 });
 
-    // Intercept clicks on local links for transition redirects
     const attachPageTransitionLinks = () => {
         document.querySelectorAll('a').forEach(link => {
             const href = link.getAttribute('href');
             if (!href) return;
             
-            // Match local HTML page links (index.html, about.html, specialties.html, etc.)
+         
             const isLocalHTML = href.endsWith('.html') || (!href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:') && !href.startsWith('#'));
             
             if (isLocalHTML && href !== '#') {
-                // Remove existing click events to prevent duplicates by rebuilding node
+            
                 link.outerHTML = link.outerHTML; 
             }
         });
 
-        // Re-query and bind click listeners to local pages
         document.querySelectorAll('a').forEach(link => {
             const href = link.getAttribute('href');
             if (!href) return;
@@ -64,24 +55,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
                     
-                    // Reset progress bar to 0% and display overlay
+                   
                     if (progressFill) progressFill.style.transition = 'none';
                     if (progressFill) progressFill.style.width = '0%';
                     
-                    // Force DOM reflow to apply the 0% style immediately without transition
+                
                     void transitionOverlay.offsetWidth;
                     
                     if (progressFill) progressFill.style.transition = 'width 0.7s cubic-bezier(0.22, 1, 0.36, 1)';
                     
-                    // Fade in overlay swiper
+       
                     transitionOverlay.classList.remove('fade-out');
                     
-                    // Start progress bar glide
+  
                     setTimeout(() => {
                         if (progressFill) progressFill.style.width = '100%';
                     }, 50);
                     
-                    // Redirect after transition completes (800ms gives bar time to fill smoothly)
+         
                     setTimeout(() => {
                         window.location.href = href;
                     }, 800);
@@ -92,9 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     attachPageTransitionLinks();
 
-    // ==========================================================================
-    // A2. Custom Glowing Lag-Follow Cursor System (Desktop only)
-    // ==========================================================================
     let cursorOuter = null;
     let cursorInner = null;
 
@@ -110,18 +98,17 @@ document.addEventListener('DOMContentLoaded', () => {
         let outerX = 0, outerY = 0; 
         let innerX = 0, innerY = 0; 
 
-        // Update real cursor coordinates
         window.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
         });
 
-        // Position interpolation loop (lerp)
+
         const tick = () => {
             innerX += (mouseX - innerX) * 0.95;
             innerY += (mouseY - innerY) * 0.95;
             
-            outerX += (mouseX - outerX) * 0.15; // smooth lag drag (lerp 0.15)
+            outerX += (mouseX - outerX) * 0.15; 
             outerY += (mouseY - outerY) * 0.15;
 
             if (cursorInner && cursorOuter) {
@@ -132,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         tick();
 
-        // Mouse click triggers visual scale shrinks
+    
         window.addEventListener('mousedown', () => {
             cursorOuter.classList.add('clicking');
             cursorInner.classList.add('clicking');
@@ -142,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cursorInner.classList.remove('clicking');
         });
 
-        // Bind hover class triggers
+       
         const bindCursorHovers = () => {
             const hoverables = 'a, button, select, input, textarea, .table-node, .menu-tab-btn, .mobile-menu-toggle, .qty-btn, .close-modal-btn, .cart-toggle-btn, .cart-close-btn';
             document.querySelectorAll(hoverables).forEach(el => {
@@ -258,15 +245,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // ==========================================
-    // 2. Global State Variables
-    // ==========================================
+
     let cart = [];
     let selectedTable = null;
 
-    // ==========================================
-    // 3. Elements Cache
-    // ==========================================
+
     const header = document.querySelector('.header');
     const scrollProgressBar = document.getElementById('scroll-progress');
     const backToTopBtn = document.getElementById('back-to-top');
@@ -315,9 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         bookingDateInput.value = today;
     }
 
-    // ==========================================
-    // 4. Dynamic Active Link Highlighting
-    // ==========================================
+
     const path = window.location.pathname;
     let pageName = path.substring(path.lastIndexOf('/') + 1);
     
@@ -338,9 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     highlightActiveNav();
 
-    // ==========================================
-    // 5. Scroll Effects (Header, Progress Bar, Back to Top)
-    // ==========================================
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
@@ -442,9 +421,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================
-    // 6. Menu Filter & Render Logic (menu.html only)
-    // ==========================================
+// Menu 
+
+
     function renderMenu(categoryFilter = 'all') {
         if (!menuContainer) return;
         menuContainer.innerHTML = '';
@@ -485,7 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         attachCartButtonListeners();
         
-        // Re-bind custom cursor hovers for newly added grid buttons
+
         if (window.rebindCursorHovers) {
             window.rebindCursorHovers();
         }
@@ -512,12 +491,10 @@ document.addEventListener('DOMContentLoaded', () => {
         renderMenu('all');
     }
 
-    // ==========================================
-    // 7. Shopping Cart Management (Shared on all pages)
-    // ==========================================
+// Shping Card Js
     function attachCartButtonListeners() {
         document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
-            // Remove previous event listener clones to prevent duplicate bindings
+      
             const newBtn = btn.cloneNode(true);
             btn.parentNode.replaceChild(newBtn, btn);
 
@@ -621,6 +598,7 @@ document.addEventListener('DOMContentLoaded', () => {
         attachCartDrawerControls();
         
         // Ensure new cart controls hover styles are loaded
+
         if (window.rebindCursorHovers) {
             window.rebindCursorHovers();
         }
@@ -683,7 +661,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cartDrawerOverlay.addEventListener('click', closeCart);
     }
 
-    // Load persistent cart
+    
     if (localStorage.getItem('ali_restaurant_cart')) {
         cart = JSON.parse(localStorage.getItem('ali_restaurant_cart'));
         updateCart();
@@ -691,7 +669,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     attachCartButtonListeners();
 
-    // Checkout processing simulation
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', () => {
             if (cart.length === 0) return;
@@ -752,9 +729,7 @@ document.addEventListener('DOMContentLoaded', () => {
         triggerConfettiRain();
     }
 
-    // ==========================================
-    // 8. Seating Booking & Visual Selection (reservation.html only)
-    // ==========================================
+
     if (bookingForm && tableNodes.length > 0) {
         tableNodes.forEach(node => {
             node.addEventListener('click', () => {
@@ -964,9 +939,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 7000);
     }
 
-    // ==========================================
-    // 10. Reviews slider / Testimonials Carousel (Home page only)
-    // ==========================================
+
     if (testimonialTrack && testimonialDots.length > 0) {
         const testimonialCards = document.querySelectorAll('.testimonial-card');
         
@@ -1004,9 +977,7 @@ document.addEventListener('DOMContentLoaded', () => {
         startTestimonialTimer();
     }
 
-    // ==========================================
-    // 11. Newsletter Form Submission Handling (Footer)
-    // ==========================================
+
     const newsletterForm = document.getElementById('newsletter-form');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', (e) => {
@@ -1025,8 +996,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 3000);
         });
     }
-    
-    // Final check to re-bind hovers on initial render items
+ 
     if (window.rebindCursorHovers) {
         window.rebindCursorHovers();
     }
